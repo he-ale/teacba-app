@@ -4,6 +4,12 @@ interface Props {
   url: string;
 }
 
+declare global {
+  interface Window {
+    tableau: any; 
+  }
+}
+
 const TableauEmbed = ({ url }: Props) => {
   const vizRef = useRef<HTMLDivElement | null>(null);
   const vizInstance = useRef(null);

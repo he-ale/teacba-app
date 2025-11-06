@@ -5,14 +5,16 @@ interface Props{
     description: string
 }
 
-export const useSEO = ({ title, description }:Props) => {
+export const useSEO = ({ title, description }: Props) => {
   useEffect(() => {
     if (title) document.title = title;
 
     if (description) {
-      let meta = document.querySelector("meta[name='description']");
+      // Hacer cast a HTMLMetaElement
+      let meta = document.querySelector("meta[name='description']") as HTMLMetaElement | null;
+
       if (meta) {
-        meta.setAttribute("content", description);
+        meta.content = description; // ahora TS sabe que 'content' existe
       } else {
         meta = document.createElement("meta");
         meta.name = "description";
