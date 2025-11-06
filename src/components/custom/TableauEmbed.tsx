@@ -12,13 +12,13 @@ declare global {
 
 const TableauEmbed = ({ url }: Props) => {
   const vizRef = useRef<HTMLDivElement | null>(null);
-  const vizInstance = useRef(null);
+  const vizInstance = useRef<any>(null);
 
   useEffect(() => {
     const initViz = () => {
       // Si ya hay un viz previo, destruirlo antes de crear uno nuevo
       if (vizInstance.current) {
-        vizInstance.current.dispose?.();
+        vizInstance.current?.dispose?.();
       }
 
       const options = {
