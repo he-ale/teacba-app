@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { Button } from "../../../components/ui/button";
-import { useSEO } from "../../../customHooks";
+import { Button } from "@/components/ui/button";
+import { useSEO } from "@/customHooks";
 
 export const HomePage= () => {
   useSEO({

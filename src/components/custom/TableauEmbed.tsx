@@ -18,7 +18,7 @@ const TableauEmbed = ({ url }: Props) => {
     const initViz = () => {
       // Si ya hay un viz previo, destruirlo antes de crear uno nuevo
       if (vizInstance.current) {
-        vizInstance.current.dispose();
+        vizInstance.current.dispose?.();
       }
 
       const options = {

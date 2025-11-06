@@ -1,6 +1,6 @@
 import { Award, BookOpen, Building2, FileText, Globe, GraduationCap, TrendingUp, Users } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "../../../components/ui/card"
-import TableauEmbed from "../../../components/custom/TableauEmbed"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import TableauEmbed from "@/components/custom/TableauEmbed"
 
 export const InstitutionalStatisticsPage = () => {
   
