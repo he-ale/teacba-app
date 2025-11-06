@@ -44,7 +44,7 @@ const TableauEmbed = ({ url }: Props) => {
     // Limpieza al desmontar
     return () => {
       if (vizInstance.current) {
-        vizInstance.current.dispose();
+        vizInstance.current.dispose?.();
       }
     };
   }, [url]); // ✅ Solo depende de la URL

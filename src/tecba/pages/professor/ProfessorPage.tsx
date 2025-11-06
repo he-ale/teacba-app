@@ -1,7 +1,7 @@
 import { Award, Briefcase, Building2, FileText, GraduationCap, Linkedin, Mail, Phone, Target, TrendingUp, Users } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "../../../components/ui/button"
 import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from ".@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "../../../components/ui/card"
 
 export const ProfessorPage = () => {
   const [selectedArea, setSelectedArea] = useState("all")
