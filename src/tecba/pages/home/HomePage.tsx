@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Button } from "../../../components/ui/button";
 import { useSEO } from "../../../customHooks";
+import { Card, CardContent, CardHeader, CardTitle } from "../../../components/ui/card";
 
 export const HomePage= () => {
   useSEO({
@@ -88,13 +89,19 @@ export const HomePage= () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             <figure className="w-full">
               <img
-                src="  https://web.tecba.tech/wp-content/uploads/2023/08/Group-144-min-1.png"
+                src="https://web.tecba.tech/wp-content/uploads/2023/08/Group-144-min-1.png"
+                alt="Descripción de la imagen"
+                className="w-full h-auto rounded-md object-cover"
+              />
+            </figure>
+            <figure className="w-full">
+              <img
+                src="https://web.tecba.tech/wp-content/uploads/2024/01/Nuestras-Ventajas-Competititvas.png"
                 alt="Descripción de la imagen"
                 className="w-full h-auto rounded-md object-cover"
               />
             </figure>
             
-            <div className="w-full">info</div>
           </div>
         </div>
       </section>
@@ -113,7 +120,26 @@ export const HomePage= () => {
         <h1 className="md:text-4xl text-2xl font-bold">Testimonios</h1>
       </section>
       <section className="bg-white md:p-10 p-2">
+        <Card className="mt-1 bg-slate-100 border-orange-500/20">
+          <CardHeader>
+            <CardTitle className="text-black text-xl">Mensaje Institucional</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="relative mb-4 aspect-video bg-slate-900 rounded-lg">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/ff8kWd4zkes"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="Video Institucional"
+              ></iframe>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+      <section className="bg-white md:p-10 p-2">
         <h1 className="md:text-4xl text-2xl font-bold">Convenios</h1>
+        
       </section>
 
     </>

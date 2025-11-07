@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 import { lazy } from "react";
 
 import { TecbaLayout } from "../tecba/layout/TecbaLayout";
@@ -78,6 +78,10 @@ export const appRouter= createBrowserRouter([
             {
                 path: "sede/:name",
                 element: <SedePage/>
+            },
+            {
+                path: "*",
+                element: <Navigate to={"/"}/>
             },
         ]
     },
